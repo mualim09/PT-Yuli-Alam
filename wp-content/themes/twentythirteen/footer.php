@@ -12,11 +12,11 @@
 
 		</div><!-- #main -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php get_sidebar( 'main' ); ?>
+			
 
 			<div class="site-info">
 				<?php do_action( 'twentythirteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentythirteen' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?></a>
+				<a href="https://www.facebook.com/theodorusyoga" title="Created by PT. Yuri Alam Eksport"><?php printf('Copyright &copy; 2015 %s', 'PT. Yuri Alam Eksport' ); ?></a>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->

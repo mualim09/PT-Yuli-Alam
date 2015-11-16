@@ -13,26 +13,44 @@
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  */
+get_header ();
+?>
 
-get_header(); ?>
+<div id="primary" class="content-area">
+	<div id="content" class="site-content" role="main">
+		<div class="subcontent">
+			<div class="pictures"></div>
+			<h1>
+				<span class="block">&nbsp;</span>PT. Yuri Alam Eksport
+			</h1>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-		<?php if ( have_posts() ) : ?>
+		</div>
+		<div class="subcontent2">
+			<h1>
+				<span class="blockinverse">&nbsp;</span>Our Products
+			</h1>
+
+		</div>
+		<div class="subcontent3">
+		<?php  if ( have_posts() ) :  ?>
 
 			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+			<?php  while ( have_posts() ) : the_post();  ?>
+				<?php get_template_part( 'content', get_post_format() );  ?>
+			<?php  endwhile;  ?>
 
-			<?php twentythirteen_paging_nav(); ?>
+			<?php  twentythirteen_paging_nav();  ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
+		<?php  else :  ?>
+			<?php  get_template_part( 'content', 'none' ); ?>
+		<?php  endif;  ?>
+		</div>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+
+	</div>
+	<!-- #content -->
+</div>
+<!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
