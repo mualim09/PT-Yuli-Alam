@@ -9,7 +9,13 @@ $(function() {
 		}, {
 			duration: 500
 		});
+		document.getElementById('burger').click();
 		return false;
+	});
+	
+	$('.nav a').on('click', function(){
+	    $('.btn-navbar').click(); //bootstrap 2.x
+	    $('.navbar-toggle').click() //bootstrap 3.x by Richard
 	});
 	
 	function hideAlert(){
@@ -21,6 +27,7 @@ $(function() {
 		$('.japanese').show();
 		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: Japanese</h3>');
 		$('.switchalert').fadeIn('slow');
+		document.getElementById('burger').click();
 		setTimeout(hideAlert, 3000);
 	});
 	
@@ -29,6 +36,7 @@ $(function() {
 		$('.japanese').hide();
 		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: English</h3>');
 		$('.switchalert').fadeIn('slow');
+		document.getElementById('burger').click();
 		setTimeout(hideAlert, 3000);
 	});
 	

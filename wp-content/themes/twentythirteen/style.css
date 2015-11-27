@@ -73,7 +73,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	-webkit-border-radius: 28;
 	-moz-border-radius: 28;
 	border-radius: 28px;
-	opacity: 0.8; 	
+	opacity: 0.8;
 }
 
 .extrafooter {
@@ -203,7 +203,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	bottom: 40%;
 	color: #ffffff;
 	font-family: Segoe UI, Arial;
-	font-size:20px;
+	font-size: 20px;
 	text-align: justify;
 	quotes: "&#8220;" "&#8221;";
 }
@@ -254,11 +254,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .container {
 	position: fixed;
 	top: 0;
-	left: 0;
-	z-index: 9999;
+	left: 0; z-index : 9999;
 	width: 100%;
 	height: 50px;
 	background-color: #f7f5e7;
+	z-index: 9999;
 }
 
 .flag {
@@ -268,6 +268,83 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	height: 20px;
 	margin-top: 20%;
 }
+
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+	.subcontent h3 {
+		font-size: 16px;
+	}
+	.subcontent	h1 {
+		font-size: 36px;
+	}
+	.subcontent2	h1 {
+		font-size: 36px;
+	}
+	.subcontent3	h1 {
+		font-size: 36px;
+	}
+	.subcontent .japanese {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+	.navbar {
+		left: 0px;
+	}
+	.extrafooter {
+		position: fixed;
+		left: 10%;
+		right: 10%;
+		bottom: 0px;
+		top: 90%;
+		height: 200px;
+		font-size: 12px;
+		opacity: 0.8;
+	}
+	.subcontent h3 {
+		font-size: 12px;
+	}
+	.subcontent .japanese {
+		bottom: 20%;
+	}
+	.subcontent .english {
+		bottom: 20%;
+	}
+	.subcontent	h1 {
+		font-size: 24px;
+		bottom: 10px;
+		left: 30px;
+		margin-top: 0px;
+	}
+	.subcontent2	h1 {
+		font-size: 24px;
+	}
+	.subcontent3	h1 {
+		font-size: 24px;
+	}
+	.subcontent .japanese {
+		font-size: 12px;
+	}
+	
+	.nav{
+		background-color: #f7f5e7;
+	}
+	#burger:HOVER{
+		background-color: lightgrey;
+	}
+}
+
+.navbarmobile{
+	list-style-type: none;
+	text-decoration: none !important;
+}
+
+.navbarmobile li:HOVER{
+	
+	background-color: lightgrey;
+	
+}
+
 
 /* END CUSTOM STYLING */
 article, aside, details, figcaption, figure, footer, header, nav,
@@ -292,6 +369,22 @@ audio
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :not
 
 
@@ -299,7 +392,23 @@ audio
 
 
 
+
+
+
+
+
+
+
+
  
+
+
+
+
+
+
+
+
 
 
 
@@ -316,7 +425,23 @@ controls
 
 
 
+
+
+
+
+
+
+
+
  
+
+
+
+
+
+
+
+
 
 
 
@@ -338,7 +463,31 @@ display
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
 
 
 
@@ -352,7 +501,31 @@ display
 
 
 
+
+
+
+
+
+
+
+
 none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -379,6 +552,22 @@ height
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
 
 
@@ -386,7 +575,23 @@ height
 
 
 
+
+
+
+
+
+
+
+
  
+
+
+
+
+
+
+
+
 
 
 
@@ -629,6 +834,22 @@ svg
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :not
 
 
@@ -636,7 +857,23 @@ svg
 
 
 
+
+
+
+
+
+
+
+
  
+
+
+
+
+
+
+
+
 
 
 
@@ -651,7 +888,23 @@ svg
 
 
 
+
+
+
+
+
+
+
+
  
+
+
+
+
+
+
+
+
 
 
 
@@ -673,7 +926,31 @@ overflow
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
 
 
 
@@ -687,7 +964,31 @@ overflow
 
 
 
+
+
+
+
+
+
+
+
 hidden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1229,6 +1530,7 @@ ul.nav-menu li:hover>ul, .nav-menu ul li:hover>ul, ul.nav-menu .focus>ul,
 	margin: 0 auto;
 	max-width: 1600px;
 	width: 100%;
+	bottom:-50px;
 }
 
 .site-header .search-form {
