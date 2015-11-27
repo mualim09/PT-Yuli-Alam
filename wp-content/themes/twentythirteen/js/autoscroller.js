@@ -1,5 +1,54 @@
 $(function() {
+	$('.japanese').hide();
+	$('.switchalert').hide();
+	$('.extrafooter').fadeOut('fast');
 	setScroll();
+	$('a').click(function(){
+		$('html, body').animate({
+			scrollTop: $($(this).attr('href')).offset().top	- 40
+		}, {
+			duration: 500
+		});
+		return false;
+	});
+	
+	function hideAlert(){
+		$('.switchalert').fadeOut('slow');
+	}
+	
+	$('#switchjap').click(function(){
+		$('.english').hide();
+		$('.japanese').show();
+		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: Japanese</h3>');
+		$('.switchalert').fadeIn('slow');
+		setTimeout(hideAlert, 3000);
+	});
+	
+	$('#switcheng').click(function(){
+		$('.english').show();
+		$('.japanese').hide();
+		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: English</h3>');
+		$('.switchalert').fadeIn('slow');
+		setTimeout(hideAlert, 3000);
+	});
+	
+	$('.footerbtn').click(function(){
+		$('html, body').animate({
+			scrollTop: 0
+		}, {
+			duration: 500
+		});
+		return false;
+	});
+	
+	$(window).scroll(function(){
+		if($(window).scrollTop() > 0){
+			$('.extrafooter').fadeIn('slow');
+		}
+		else{
+			$('.extrafooter').fadeOut('slow');
+		}
+	});
 });
 
 function setScroll(){
