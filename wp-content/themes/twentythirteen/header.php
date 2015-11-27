@@ -73,21 +73,7 @@
 					</div>
 				</div>
 			</nav>
-			<div id="navbar" class="navbar nav" style="top: 10px;">
-				<nav id="site-navigation" class="navigation main-navigation"
-					role="navigation">
-					<button class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></button>
-					<a class="screen-reader-text skip-link" href="#content"
-						title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
-					<?php /* wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); */ ?>
-					
-				</nav>
-				<p
-					style="font-family: Segoe WP; font-weight: light; font-size: 20px; position: absolute; left: 30px; bottom: 0px;">Enjoy
-					our Indonesian natural products.</p>
-
-				<!-- #site-navigation -->
-			</div>
+			
 			<!-- #navbar -->
 		</header>
 		<!-- #masthead -->
