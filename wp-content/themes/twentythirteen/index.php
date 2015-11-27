@@ -47,13 +47,19 @@ get_header ();
 			</div>
 		</div>
 		<div class="subcontent2" id="products">
-			<h1>
+			<h1 class="english">
 				<span class="blockinverse">&nbsp;</span>Our Products
+			</h1>
+			<h1 class="japanese">
+				<span class="blockinverse">&nbsp;</span>当社の製品
 			</h1>
 		</div>
 		<div class="subcontent nonheading" id="aboutus">
-			<h1>
+			<h1 class="englishtitle">
 				<span class="block">&nbsp;</span>About Us
+			</h1>
+			<h1 class="japanesetitle">
+				<span class="block">&nbsp;</span>私達に関して
 			</h1>
 			<h3 class="english">Koichi Suzuki had been lived and worked
 				international trading business in Brisbane, Australia since 1984
@@ -75,8 +81,11 @@ get_header ();
 			</h3>
 		</div>
 		<div class="subcontent2" id="contactus">
-			<h1>
+			<h1 class="english">
 				<span class="blockinverse">&nbsp;</span>Contact Us
+			</h1>
+			<h1 class="japanese">
+				<span class="blockinverse">&nbsp;</span>お問い合わせ
 			</h1>
 			<div class="contactlist">
 				<h3>

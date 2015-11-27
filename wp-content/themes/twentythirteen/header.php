@@ -56,7 +56,7 @@
 						</a>
 					</div>
 					<div id="burgermenu" class="collapse navbar-collapse">
-						<ul class="nav navbar-nav navbar-right">
+						<ul class="nav navbar-nav navbar-right english">
 							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 							<!-- <li><a class="page-scroll"><?php/*  get_search_form(); */ ?></a></li> -->
 							<li><a class="page-scroll" href="#products">Products</a></li>
@@ -66,6 +66,20 @@
 								<img id="switcheng"
 									src="<?php echo get_template_directory_uri(); ?>/images/ukflag.jpg"
 									class="flag">&nbsp;</img> <img id="switchjap"
+									src="<?php echo get_template_directory_uri(); ?>/images/japanflag.jpg"
+									class="flag">&nbsp;</img>
+							</div>
+						</ul>
+						<ul class="nav navbar-nav navbar-right japanese">
+							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+							<!-- <li><a class="page-scroll"><?php/*  get_search_form(); */ ?></a></li> -->
+							<li><a class="page-scroll" href="#products">当社の製品</a></li>
+							<li><a class="page-scroll" href="#aboutus">私達に関して</a></li>
+							<li><a class="page-scroll" href="#contactus">お問い合わせ</a></li>
+							<div class="pull-right">
+								<img id="switcheng2"
+									src="<?php echo get_template_directory_uri(); ?>/images/ukflag.jpg"
+									class="flag">&nbsp;</img> <img id="switchjap2"
 									src="<?php echo get_template_directory_uri(); ?>/images/japanflag.jpg"
 									class="flag">&nbsp;</img>
 							</div>

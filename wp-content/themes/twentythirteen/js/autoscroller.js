@@ -1,5 +1,6 @@
 $(function() {
 	$('.japanese').hide();
+	$('.japanesetitle').hide();
 	$('.switchalert').hide();
 	$('.extrafooter').fadeOut('fast');
 	setScroll();
@@ -22,9 +23,33 @@ $(function() {
 		$('.switchalert').fadeOut('slow');
 	}
 	
+	$('#switchjap2').click(function(){
+		$('.english').hide();
+		$('.englishtitle').hide();
+		$('.japanese').show();
+		$('.japanesetitle').show();
+		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: Japanese</h3>');
+		$('.switchalert').fadeIn('slow');
+		document.getElementById('burger').click();
+		setTimeout(hideAlert, 3000);
+	});
+	
+	$('#switcheng2').click(function(){
+		$('.english').show();
+		$('.englishtitle').show();
+		$('.japanese').hide();
+		$('.japanesetitle').hide();
+		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: English</h3>');
+		$('.switchalert').fadeIn('slow');
+		document.getElementById('burger').click();
+		setTimeout(hideAlert, 3000);
+	});
+	
 	$('#switchjap').click(function(){
 		$('.english').hide();
+		$('.englishtitle').hide();
 		$('.japanese').show();
+		$('.japanesetitle').show();
 		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: Japanese</h3>');
 		$('.switchalert').fadeIn('slow');
 		document.getElementById('burger').click();
@@ -33,7 +58,9 @@ $(function() {
 	
 	$('#switcheng').click(function(){
 		$('.english').show();
+		$('.englishtitle').show();
 		$('.japanese').hide();
+		$('.japanesetitle').hide();
 		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: English</h3>');
 		$('.switchalert').fadeIn('slow');
 		document.getElementById('burger').click();
