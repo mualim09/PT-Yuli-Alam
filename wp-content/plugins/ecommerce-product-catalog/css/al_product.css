@@ -795,9 +795,13 @@ article#product_listing {
     display: inline-block;
 }
 
-.product-details .shortdesc {
-    padding: 0 20px 20px 0;
-}
+.shortdesc {
+        margin: 0 3%;
+        color: #000; 
+        border-bottom-width: 2px;
+        border-bottom-color: #c96;
+		border-bottom-style: solid;
+    }
 
 #product_subcategories table {
     width: auto;
@@ -840,6 +844,7 @@ article#product_listing {
     margin: 0;
 }
 
+
 .product-entry tbody {
     border: 0;
 }
@@ -877,6 +882,10 @@ article#product_listing {
     margin: 0;
     max-width: 200px;
     width: auto;
+}
+
+.product-page-header {
+	padding: 25% 3% 100px;
 }
 
 #product_details .price-table .price-label {
@@ -1597,24 +1606,20 @@ input.product-search-box[type="search"] {
         max-width: 100%;
         width: 100%;
     }
-
-    h3.shortdesc {
-        padding: 0;
-        color: #ffffff; 
-    }
-        
-    .entry-header .shortdesc p:BEFORE {
-		display: block;
-		content: "\201C";
-		font-size: 80px;
-		position: absolute;
-		left: -50px;
-		top: -20px;
-		right: 20px;
-		color: #ffffff;
-		font-family: "Times New Roman";
-    }
     
+    .responsive .product-page-header {
+		padding: 30% 3% 50px;
+	}
+
+    .responsive .shortdesc {
+        margin: 0 1%;
+        font-size: 120%;
+        color: #000; 
+        border-bottom-width: 0.5px;
+        border-bottom-color: #c96;
+   		border-bottom-style: solid;
+    }
+            
     .responsive .al_archive {
         margin: 5px 10px 5px 5px;
     }

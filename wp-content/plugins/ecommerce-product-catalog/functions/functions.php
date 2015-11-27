@@ -209,13 +209,14 @@ function single_product_header( $post, $single_names ) {
 	if ( get_integration_type() != 'simple' ) {
 		$src = get_product_image_url( $post->ID );
 		?>
-		<header class="entry-header product-page-header" style="background: url('<?php echo $src; ?>') no-repeat center center fixed; height: 0; min-width: 100%; padding: 25% 3% 10%; background-size: cover;">
+		<header class="entry-header product-page-header" style="background: url('<?php echo $src; ?>') no-repeat center center fixed; height: 0; min-width: 100%; background-size: cover;">
 			<?php 
 			do_action( 'single_product_begin', $product_id ); 
-			do_action( 'single_product_header', $post, $single_names ); 
-			do_action( 'product_details', $post, $single_names );
+			do_action( 'single_product_header', $post, $single_names ); 		
 			?>
 		</header><?php
+
+		do_action( 'product_details', $post, $single_names );
 	}
 }
 
@@ -466,10 +467,9 @@ function get_shipping_options_table( $product_id, $v_single_names = null ) {
 function show_short_desc( $post, $single_names ) {
 	$shortdesc = get_product_short_description( $post->ID );
 	?>
-	<h3 class="shortdesc">
-		<?php //echo apply_filters( 'product_short_description', $shortdesc ); 
-		echo $shortdesc; ?>
-	</h3>
+	<div class="shortdesc">
+		<h3><?php echo apply_filters( 'product_short_description', $shortdesc );?><h3></h3>
+	</div>
 	<?php
 }
 
@@ -531,6 +531,7 @@ function show_product_description( $post, $single_names ) {
 	$product_description = get_product_description( $post->ID );
 	if ( !empty( $product_description ) ) {
 		?>
+		<h2>Description</h2>
 		<div class="product-description"><?php
 			if ( get_integration_type() == 'simple' ) {
 				echo apply_filters( 'product_simple_description', $product_description );
