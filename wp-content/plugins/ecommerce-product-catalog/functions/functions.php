@@ -207,9 +207,14 @@ add_action( 'before_product_entry', 'single_product_header', 10, 2 );
  */
 function single_product_header( $post, $single_names ) {
 	if ( get_integration_type() != 'simple' ) {
+		$src = get_product_image_url( $post->ID );
 		?>
-		<header class="entry-header product-page-header">
-			<?php do_action( 'single_product_header', $post, $single_names ); ?>
+		<header class="entry-header product-page-header" style="background: url('<?php echo $src; ?>') no-repeat center center fixed; height: 0; min-width: 100%; padding: 25% 3% 10%; background-size: cover;">
+			<?php 
+			do_action( 'single_product_begin', $product_id ); 
+			do_action( 'single_product_header', $post, $single_names ); 
+			do_action( 'product_details', $post, $single_names );
+			?>
 		</header><?php
 	}
 }
@@ -235,8 +240,9 @@ add_action( 'before_product_listing_entry', 'product_listing_header', 10, 2 );
  */
 function product_listing_header( $post, $archive_names ) {
 	if ( get_integration_type() != 'simple' ) {
+		$src = get_product_image_url( $post->ID);
 		?>
-		<header class="entry-header product-listing-header">
+		<header class="entry-header product-listing-header" style="background-image: url('<?php echo $src; ?>'); background-repeat: no-repeat; background-size: 100% 100%; height:400px;">
 			<?php do_action( 'product_listing_header', $post, $archive_names ); ?>
 		</header><?php
 	}
@@ -460,9 +466,10 @@ function get_shipping_options_table( $product_id, $v_single_names = null ) {
 function show_short_desc( $post, $single_names ) {
 	$shortdesc = get_product_short_description( $post->ID );
 	?>
-	<div class="shortdesc">
-		<?php echo apply_filters( 'product_short_description', $shortdesc ); ?>
-	</div>
+	<h3 class="shortdesc">
+		<?php //echo apply_filters( 'product_short_description', $shortdesc ); 
+		echo $shortdesc; ?>
+	</h3>
 	<?php
 }
 
@@ -717,7 +724,7 @@ function product_breadcrumbs() {
 		} else {
 			$current_product = '';
 		}
-		$bread = '<p id="breadcrumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="' . $home_page . '" rel="v:url" property="v:title">' . __( 'Home', 'ecommerce-product-catalog' ) . '</a></span>';
+		$bread = '<p id="breadcrumbs" style="margin: 0;"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="' . $home_page . '" rel="v:url" property="v:title">' . __( 'Home', 'ecommerce-product-catalog' ) . '</a></span>';
 		if ( !empty( $product_archive ) ) {
 			$bread .= ' » <span typeof="v:Breadcrumb"><a href="' . $product_archive . '" rel="v:url" property="v:title">' . $product_archive_title . '</a></span>';
 		}

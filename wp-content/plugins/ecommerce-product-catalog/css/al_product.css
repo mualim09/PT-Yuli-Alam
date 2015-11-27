@@ -989,6 +989,14 @@ div.setting-content table td.longer {
     position: relative;
 }
 
+#breadcrumbs span {
+    color: #FFF;	
+}
+
+#breadcrumbs a {
+	color: #FFECA8;
+}
+
 /* Theme Integration System */
 .wp-admin .widget-inside .warning {
     width: auto;
@@ -1590,10 +1598,23 @@ input.product-search-box[type="search"] {
         width: 100%;
     }
 
-    .responsive .product-details .shortdesc {
+    h3.shortdesc {
         padding: 0;
+        color: #ffffff; 
     }
-
+        
+    .entry-header .shortdesc p:BEFORE {
+		display: block;
+		content: "\201C";
+		font-size: 80px;
+		position: absolute;
+		left: -50px;
+		top: -20px;
+		right: 20px;
+		color: #ffffff;
+		font-family: "Times New Roman";
+    }
+    
     .responsive .al_archive {
         margin: 5px 10px 5px 5px;
     }
