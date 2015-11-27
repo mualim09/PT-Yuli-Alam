@@ -19,12 +19,17 @@ get_header ();
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 <script type="text/javascript"
 	src="<?php echo esc_url(get_template_directory_uri()); ?>/js/autoscroller.js"></script>
+
 <div id="primary" class="content-area">
 	<div id="content" class="site-content" role="main">
 		<div class="subcontent">
-			<h1>
-				<span class="block">&nbsp;</span>PT. Yuri Alam Eksport
-			</h1>
+			<div>
+				<h1>
+					<span class="block">&nbsp;</span>PT. Yuri Alam Eksport
+				</h1>
+				<p>Enjoy our Indonesian natural products. Put here all of your
+					description...</p>
+			</div>
 			<div class="pictures">
 				<div class="scroll">
 					<ul>
@@ -46,7 +51,7 @@ get_header ();
 				<span class="blockinverse">&nbsp;</span>Our Products
 			</h1>
 		</div>
-		<div class="subcontent" id="aboutus">
+		<div class="subcontent nonheading" id="aboutus">
 			<h1>
 				<span class="block">&nbsp;</span>About Us
 			</h1>
@@ -69,10 +74,24 @@ get_header ();
 				長年培ってきました経験と取引先人間関係を生かして、ご希望の商品開発、生産者を見いだす事、独自商品を製作される事、新たな客先を開拓する事や独自に進出される方への業界に詳しい方や経験者との橋渡し等お手伝いして協力関係を構築していき、インドネシアとの輸出、輸入をお試みのお客様に役立ち共に発展できますことを祈念致しております。
 			</h3>
 		</div>
-			<div class="subcontent2" id="contactus">
+		<div class="subcontent2" id="contactus">
 			<h1>
 				<span class="blockinverse">&nbsp;</span>Contact Us
 			</h1>
+			<div class="contactlist">
+				<h3>
+					<span class="glyphicon glyphicon-envelope">&nbsp;</span>
+					kenyurisuzuki@gmail.com
+				</h3>
+				<h3>
+					<span class="glyphicon glyphicon-earphone">&nbsp;</span> +62 274
+					625584, +62 81 392 463 938
+				</h3>
+				<h3>
+					<span class="glyphicon glyphicon-home">&nbsp;</span> #129 Nandan
+					Griya Idaman, Sleman, Yogyakarta 55581 Indonesia
+				</h3>
+			</div>
 		</div>
 
 

@@ -105,13 +105,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .subcontent2 {
-	height: 400px;
+	height: 300px;
 	/* background: url(images/headers/circle2.png) center top repeat; */
 	position: relative;
 	left: 0px;
 	right: 0px;
 	top: 0px;
 	bottom: 0px;
+}
+
+.contactlist{
+	margin: auto;
+	position: relative;
+	left:30px;
+	top: 100px;
+	overflow: hidden;
+	display: table-cell;
 }
 
 .subcontent3 {
@@ -163,20 +172,37 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	margin-right: 20px;
 }
 
+.subcontent p {
+	color: #ffffff;
+	position: absolute;
+	bottom: 0%;
+	left: 30px;
+	font-weight: light;
+	font-family: Segoe WP, Segoe UI, Arial, Serif;
+}
+
 .subcontent2 h1 {
 	color: #000000;
 	position: absolute;
 	margin-top: 0px;
 	top: 30px;
 	left: 30px;
+	bottom: 0px;
 	font-weight: light;
 	font-family: Segoe WP, Segoe UI, Arial, Serif;
 }
 
 .subcontent h1 {
 	position: absolute;
-	margin-bottom: 0px;
-	bottom: 30px;
+	bottom: 7%;
+	left: 30px;
+	font-weight: light;
+	font-family: Segoe WP, Segoe UI, Arial, Serif;
+}
+
+.nonheading h1 {
+	position: absolute;
+	bottom: 0%;
 	left: 30px;
 	font-weight: light;
 	font-family: Segoe WP, Segoe UI, Arial, Serif;
@@ -311,19 +337,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		bottom: 20%;
 	}
 	.subcontent	h1 {
-		font-size: 24px;
-		bottom: 10px;
+		font-size: 30px;
+		bottom: 10%;
 		left: 30px;
 		margin-top: 0px;
 	}
+	.nonheading h1{
+		bottom: 0%;
+	}
 	.subcontent2	h1 {
-		font-size: 24px;
+		font-size: 30px;
 	}
 	.subcontent3	h1 {
-		font-size: 24px;
+		font-size: 30px;
 	}
 	.subcontent .japanese {
 		font-size: 12px;
+	}
+	.subcontent p {
+	font-size: 12px;
+	bottom:5%;
 	}
 	
 	.nav{
