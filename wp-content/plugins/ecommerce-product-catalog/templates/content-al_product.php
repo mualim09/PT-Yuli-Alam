@@ -23,7 +23,7 @@ $single_options		 = get_product_page_settings();
 
 <article id="product-<?php the_ID(); ?>" style="padding: 0;" <?php post_class( 'al_product responsive product-' . $product_id ); ?>>
 	<?php do_action( 'before_product_entry', $post, $single_names ); ?>
-	<div class="entry-content product-entry" style="margin: 1% 3%;"><?php
+	<div class="entry-content product-entry"><?php
 		//do_action( 'start_product_entry', $post, $single_names );
 		//do_action( 'before_product_details', $product_id, $single_options );
 		$details_class		 = product_gallery_enabled( $single_options[ 'enable_product_gallery' ], $single_options[ 'enable_product_gallery_only_when_exist' ], $post );

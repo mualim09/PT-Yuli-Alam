@@ -53,7 +53,16 @@ get_header ();
 			<h1 class="japanese">
 				<span class="blockinverse">&nbsp;</span>当社の製品
 			</h1>
-		</div>
+			<div class="home-categories">
+			<?php 
+				$show_categories = do_shortcode( '[show_categories]' );
+				if ( !empty( $show_categories ) ) {
+					//do_action( 'before_category_subcategories' );
+					echo $show_categories;
+				}
+			?>
+			</div>
+			</div>
 		<div class="subcontent nonheading" id="aboutus">
 			<h1 class="englishtitle">
 				<span class="block">&nbsp;</span>About Us

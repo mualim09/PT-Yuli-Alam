@@ -796,12 +796,24 @@ article#product_listing {
 }
 
 .shortdesc {
-        margin: 0 3%;
-        color: #000; 
-        border-bottom-width: 2px;
-        border-bottom-color: #c96;
-		border-bottom-style: solid;
+        margin: 0;
+        padding: 1.5% 3%;
+        color: #fff; 
+        background-color: #c96;
     }
+
+.shortdesc h3 {
+	margin: 0;
+}
+
+.shortdesc p {
+	margin-left: 20px;
+	margin-bottom: 0;
+	border-left-width: 5px;
+    border-left-color: #fff;
+	border-left-style: solid;
+	padding-left: 15px;
+}
 
 #product_subcategories table {
     width: auto;
@@ -838,12 +850,22 @@ article#product_listing {
 .product-description {
     padding: 10px 0 0 0;
     clear: both;
+    font-size: 110%;
 }
 
-.single .product-entry {
-    margin: 0;
+.single .product-entry, #product_listing .entry-content {
+    margin: 1% 3%;
+    min-width: 94%;
 }
 
+#product_listing .product-category-image {
+	float: left;
+	margin-right: 2%;
+}
+
+#product_listing .taxonomy-description {
+	font-size: 120%;
+}
 
 .product-entry tbody {
     border: 0;
@@ -885,7 +907,18 @@ article#product_listing {
 }
 
 .product-page-header {
-	padding: 25% 3% 100px;
+	padding: 25% 3% 100px;	
+	height: 0;
+	min-width: 100%;
+}
+
+#product_listing .product-page-header {
+	padding: 25px 3% 120px;	
+	margin-bottom: 3%;
+}
+
+#product_listing {
+	padding: 0;
 }
 
 #product_details .price-table .price-label {

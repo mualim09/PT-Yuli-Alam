@@ -584,6 +584,8 @@ function product_list_header() {
 		} else if ( is_tax() && !empty( $archive_names[ 'category_products' ] ) && is_ic_product_listing_showing_cats() ) {
 			//$the_tax = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 			echo '<h2 class="catalog-header">' . do_shortcode( $archive_names[ 'category_products' ] ) . '</h2>';
+		} else {
+			echo '<h2 class="catalog-header">Products</h2>';
 		}
 	}
 }

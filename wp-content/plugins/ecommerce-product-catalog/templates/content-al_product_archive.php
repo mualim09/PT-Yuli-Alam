@@ -13,7 +13,7 @@ global $post;
 $default_archive_names	 = default_archive_names();
 $multiple_settings		 = get_multiple_settings();
 $archive_names			 = get_archive_names();
-do_action( 'product_listing_begin', $multiple_settings );
+//do_action( 'product_listing_begin', $multiple_settings );
 $listing_class			 = apply_filters( 'product_listing_classes', 'al_product responsive' );
 ?>
 <article id="product_listing" <?php post_class( $listing_class ); ?>>
@@ -60,6 +60,7 @@ $listing_class			 = apply_filters( 'product_listing_classes', 'al_product respon
 					$product_subcategories = wp_list_categories( 'show_option_none=No_cat&echo=0&title_li=&taxonomy=' . $taxonomy_name . '&child_of=' . $term );
 					if ( !strpos( $product_subcategories, 'No_cat' ) ) {
 						?>
+						<h2>Subcategories:</h2>
 						<div class="product-subcategories">
 							<?php
 							do_action( 'before_category_subcategories' );

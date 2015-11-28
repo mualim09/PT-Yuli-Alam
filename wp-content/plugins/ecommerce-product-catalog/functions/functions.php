@@ -209,7 +209,7 @@ function single_product_header( $post, $single_names ) {
 	if ( get_integration_type() != 'simple' ) {
 		$src = get_product_image_url( $post->ID );
 		?>
-		<header class="entry-header product-page-header" style="background: url('<?php echo $src; ?>') no-repeat center center fixed; height: 0; min-width: 100%; background-size: cover;">
+		<header class="entry-header product-page-header" style="background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<?php echo $src; ?>') no-repeat center center fixed; background-size: cover">
 			<?php 
 			do_action( 'single_product_begin', $product_id ); 
 			do_action( 'single_product_header', $post, $single_names ); 		
@@ -241,10 +241,11 @@ add_action( 'before_product_listing_entry', 'product_listing_header', 10, 2 );
  */
 function product_listing_header( $post, $archive_names ) {
 	if ( get_integration_type() != 'simple' ) {
-		$src = get_product_image_url( $post->ID);
 		?>
-		<header class="entry-header product-listing-header" style="background-image: url('<?php echo $src; ?>'); background-repeat: no-repeat; background-size: 100% 100%; height:400px;">
-			<?php do_action( 'product_listing_header', $post, $archive_names ); ?>
+		<header class="entry-header product-page-header" style="background-color: #c96 ;">
+			<?php 
+			do_action( 'product_listing_begin', get_multiple_settings() ); 
+			do_action( 'product_listing_header', $post, $archive_names ); ?>
 		</header><?php
 	}
 }
@@ -468,7 +469,7 @@ function show_short_desc( $post, $single_names ) {
 	$shortdesc = get_product_short_description( $post->ID );
 	?>
 	<div class="shortdesc">
-		<h3><?php echo apply_filters( 'product_short_description', $shortdesc );?><h3></h3>
+		<h3><?php echo apply_filters( 'product_short_description', $shortdesc );?></h3>
 	</div>
 	<?php
 }
@@ -567,7 +568,7 @@ function show_related_categories( $post, $single_names, $taxonomy_name ) {
 	if ( $settings[ 'related' ] == 'categories' ) {
 		echo get_related_categories( $post->ID, $single_names, $taxonomy_name );
 	} else {
-		echo get_related_products( null, true );
+		echo get_related_products( 4, true );
 	}
 }
 

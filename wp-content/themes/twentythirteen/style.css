@@ -123,6 +123,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	display: table-cell;
 }
 
+#products {
+	height: 400px;
+}
+
+.home-categories {
+	padding-top: 10%;
+	height: 0;
+	margin: 1%;
+}
+
 .subcontent3 {
 	height: 400px;
 	position: relative;
@@ -358,7 +368,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-size: 12px;
 	bottom:5%;
 	}
-	
+		
 	.nav{
 		background-color: #f7f5e7;
 	}
@@ -1635,7 +1645,7 @@ ul.nav-menu li:hover>ul, .nav-menu ul li:hover>ul, ul.nav-menu .focus>ul,
 }
 
 .entry-header {
-	margin-bottom: 30px;
+	margin-bottom: 0;	
 }
 
 .entry-title {
