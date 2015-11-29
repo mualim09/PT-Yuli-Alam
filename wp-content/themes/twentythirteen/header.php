@@ -46,16 +46,22 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header" role="banner">
-			<nav class="navbar"
-				role="navigation">
+			<nav class="navbar" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-						<a id="burger" class="navbar-toggle collapsed" style="cursor: pointer;"
-							data-toggle="collapse" data-target="#burgermenu">
-							<span style="color: #000000; " class="glyphicon glyphicon-menu-hamburger"></span>
+						<a id="burger" class="navbar-toggle collapsed"
+							style="cursor: pointer;" data-toggle="collapse"
+							data-target="#burgermenu"> <span style="color: #000000;"
+							class="glyphicon glyphicon-menu-hamburger"></span>
 						</a>
 					</div>
 					<div id="burgermenu" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-left">
+							<li><img
+								src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo.png"
+								style="margin-left: -30%; padding-left: 40%; padding-top: 5%; width: 75px; height: auto;" />
+							</li>
+						</ul>
 						<ul class="nav navbar-nav navbar-right english">
 							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 							<!-- <li><a class="page-scroll"><?php/*  get_search_form(); */ ?></a></li> -->
@@ -87,7 +93,7 @@
 					</div>
 				</div>
 			</nav>
-			
+
 			<!-- #navbar -->
 		</header>
 		<!-- #masthead -->

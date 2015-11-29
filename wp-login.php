@@ -150,7 +150,8 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div id="login">
 		<!-- <h1><a href="<?php echo esc_url( $login_header_url ); ?>" title="<?php echo esc_attr( $login_header_title ); ?>" tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1> -->
-		<h2>Login to PT. Yuri Alam Eksport</h2>
+		<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo.png" style="padding-left: 35%; width: 100px; height:auto;"/>
+		<h2 style="text-align: center; margin-bottom: 10%;">Login to PT. Yuri Alam Eksport</h2>
 	<?php
 
 	unset( $login_header_url, $login_header_title );
