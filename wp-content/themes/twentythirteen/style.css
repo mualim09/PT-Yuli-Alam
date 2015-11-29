@@ -124,13 +124,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 #products {
-	height: 400px;
+	clear: both;
+	height: 100%;	
+	overflow: auto;
+	position: relative;
+	
 }
 
 .home-categories {
 	padding-top: 10%;
 	height: 0;
-	margin: 1%;
+	margin: 0 auto;
 }
 
 .subcontent3 {
