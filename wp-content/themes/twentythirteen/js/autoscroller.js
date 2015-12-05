@@ -1,92 +1,135 @@
 $(function() {
+	setMenu();
 	$('.japanese').hide();
 	$('.japanesetitle').hide();
 	$('.switchalert').hide();
 	$('.extrafooter').fadeOut('fast');
 	setScroll();
-	$('a').click(function(){
+	$('a').click(function() {
 		$('html, body').animate({
-			scrollTop: $($(this).attr('href')).offset().top	- 40
+			scrollTop : $($(this).attr('href')).offset().top - 40
 		}, {
-			duration: 500
+			duration : 500
 		});
 		document.getElementById('burger').click();
 		return false;
 	});
 	
-	$('.nav a').on('click', function(){
-	    $('.btn-navbar').click(); //bootstrap 2.x
-	    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+	$('#gotohome').click(function(){
+		var href = window.location.href;
+		if(href.indexOf('localhost') > -1){
+			window.location.href = 'http://localhost/YuriAlamEksport/'
+		}
+		else if(href.indexOf('yurialam.com') > -1){
+			window.location.href = 'http://yurialam.com/';
+		}
+		else{
+			window.location.href = 'http://yurialam.com/';
+		}
 	});
-	
-	function hideAlert(){
+
+	$('.nav a').on('click', function() {
+		$('.btn-navbar').click(); // bootstrap 2.x
+		$('.navbar-toggle').click() // bootstrap 3.x by Richard
+	});
+
+	function hideAlert() {
 		$('.switchalert').fadeOut('slow');
 	}
 	
-	$('#switchjap2').click(function(){
-		$('.english').hide();
-		$('.englishtitle').hide();
-		$('.japanese').show();
-		$('.japanesetitle').show();
-		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: Japanese</h3>');
-		$('.switchalert').fadeIn('slow');
-		document.getElementById('burger').click();
-		setTimeout(hideAlert, 3000);
-	});
-	
-	$('#switcheng2').click(function(){
-		$('.english').show();
-		$('.englishtitle').show();
-		$('.japanese').hide();
-		$('.japanesetitle').hide();
-		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: English</h3>');
-		$('.switchalert').fadeIn('slow');
-		document.getElementById('burger').click();
-		setTimeout(hideAlert, 3000);
-	});
-	
-	$('#switchjap').click(function(){
-		$('.english').hide();
-		$('.englishtitle').hide();
-		$('.japanese').show();
-		$('.japanesetitle').show();
-		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: Japanese</h3>');
-		$('.switchalert').fadeIn('slow');
-		document.getElementById('burger').click();
-		setTimeout(hideAlert, 3000);
-	});
-	
-	$('#switcheng').click(function(){
-		$('.english').show();
-		$('.englishtitle').show();
-		$('.japanese').hide();
-		$('.japanesetitle').hide();
-		$('.switchalert').html('<h3 style="text-align: center; ">Site language is changed to: English</h3>');
-		$('.switchalert').fadeIn('slow');
-		document.getElementById('burger').click();
-		setTimeout(hideAlert, 3000);
-	});
-	
-	$('.footerbtn').click(function(){
+	$('#switchjap2')
+			.click(
+					function() {
+						$('.english').hide();
+						$('.englishtitle').hide();
+						$('.japanese').show();
+						$('.japanesetitle').show();
+						$('.switchalert')
+								.html(
+										'<h3 style="text-align: center; ">Site language is changed to: Japanese</h3>');
+						$('.switchalert').fadeIn('slow');
+						document.getElementById('burger').click();
+						setTimeout(hideAlert, 3000);
+					});
+
+	$('#switcheng2')
+			.click(
+					function() {
+						$('.english').show();
+						$('.englishtitle').show();
+						$('.japanese').hide();
+						$('.japanesetitle').hide();
+						$('.switchalert')
+								.html(
+										'<h3 style="text-align: center; ">Site language is changed to: English</h3>');
+						$('.switchalert').fadeIn('slow');
+						document.getElementById('burger').click();
+						setTimeout(hideAlert, 3000);
+					});
+
+	$('#switchjap')
+			.click(
+					function() {
+						$('.english').hide();
+						$('.englishtitle').hide();
+						$('.japanese').show();
+						$('.japanesetitle').show();
+						$('.switchalert')
+								.html(
+										'<h3 style="text-align: center; ">Site language is changed to: Japanese</h3>');
+						$('.switchalert').fadeIn('slow');
+						document.getElementById('burger').click();
+						setTimeout(hideAlert, 3000);
+					});
+
+	$('#switcheng')
+			.click(
+					function() {
+						$('.english').show();
+						$('.englishtitle').show();
+						$('.japanese').hide();
+						$('.japanesetitle').hide();
+						$('.switchalert')
+								.html(
+										'<h3 style="text-align: center; ">Site language is changed to: English</h3>');
+						$('.switchalert').fadeIn('slow');
+						document.getElementById('burger').click();
+						setTimeout(hideAlert, 3000);
+					});
+
+	$('.footerbtn').click(function() {
 		$('html, body').animate({
-			scrollTop: 0
+			scrollTop : 0
 		}, {
-			duration: 500
+			duration : 500
 		});
 		return false;
 	});
-	
-	$(window).scroll(function(){
-		if($(window).scrollTop() > 0){
+
+	$(window).scroll(function() {
+		if ($(window).scrollTop() > 0) {
 			$('.extrafooter').fadeIn('slow');
-		}
-		else{
+		} else {
 			$('.extrafooter').fadeOut('slow');
 		}
 	});
 });
 
-function setScroll(){
+function setMenu(){
+	var href = window.location.href;
+	if(href != 'http://localhost/YuriAlamEksport/' && href != 'http://localhost/YuriAlamEksport/index.php' &&
+	href != 'http://yurialam.com/' && href != 'http://www.yurialam.com/' && href != 'http://yurialam.com/index.php'
+		&& href != 'http://www.yurialam.com/index.php'){
+	$('.nonhome').show();
+	$('.menuhome').hide();
+}
+else{
+	$('.nonhome').hide();
+	$('.menuhome').show();
+}
+}
+
+function setScroll() {
 	var scroller = $('.scroll');
 	var content = scroller.children('ul');
 	content.children().clone().appendTo(content);

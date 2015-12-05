@@ -62,7 +62,11 @@
 								style="margin-left: -30%; padding-left: 40%; padding-top: 5%; width: 75px; height: auto;" />
 							</li>
 						</ul>
-						<ul class="nav navbar-nav navbar-right english">
+						<ul class="nav navbar-nav navbar-right english nonhome">
+							<li><button id="gotohome" class="gotohome btn-link" style="cursor: pointer;
+							background-color: transparent; background: transparent; color: #ac0606;">Home (ホーム)</button></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right english menuhome">
 							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 							<!-- <li><a class="page-scroll"><?php/*  get_search_form(); */ ?></a></li> -->
 							<li><a class="page-scroll" href="#products">Products</a></li>
@@ -76,7 +80,7 @@
 									class="flag">&nbsp;</img>
 							</div>
 						</ul>
-						<ul class="nav navbar-nav navbar-right japanese">
+						<ul class="nav navbar-nav navbar-right japanese menuhome">
 							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 							<!-- <li><a class="page-scroll"><?php/*  get_search_form(); */ ?></a></li> -->
 							<li><a class="page-scroll" href="#products">当社の製品</a></li>
